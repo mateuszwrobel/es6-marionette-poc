@@ -1,0 +1,39 @@
+{
+	"name": "browserifytest",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"browserify": {
+		"transform": [
+			"babelify"
+		]
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "browserify app\\index.js --debug -g uglifyify | exorcist assets\\js\\bundle.js.map > assets\\js\\bundle.js",
+		"build-dev": "browserify app\\index.js --debug > assets\\js\\bundle.js",
+		"watch-js": "watchify app\\index.js -d -v -o assets\\js\\bundle.js -p errorify",
+		"dev": "parallelshell \"npm run watch\" \"npm run reactload\" \"npm run http-server\""
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"babel-core": "^5.8.24",
+		"babelify": "^6.3.0",
+		"backbone": "^1.2.3",
+		"backbone.marionette": "^2.4.3",
+		"body-parser": "^1.13.3",
+		"browserify": "^11.1.0",
+		"browserify-handlebars": "^1.0.0",
+		"errorify": "^0.3.1",
+		"exorcist": "^0.4.0",
+		"express": "^4.13.3",
+		"handlebars": "^4.0.2",
+		"jquery": "^2.1.4",
+		"livereload": "^0.3.7",
+		"lodash": "^3.10.1",
+		"parallelshell": "^2.0.0",
+		"uglifyify": "^3.0.1",
+		"watchify": "^3.4.0"
+	}
+}
