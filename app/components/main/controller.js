@@ -1,8 +1,9 @@
+var app = require('./../../app');
 var View = require('./view');
 
 var Main = {
 	init: () => {
-		App.mainLayout.show(new View());
+		app.mainLayout.show(new View());
 	}
 };
 

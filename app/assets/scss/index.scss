@@ -1,0 +1,13 @@
+@import 'variables';
+
+body {
+	background: $base-background-color;
+	font-size: 10px;
+	font-family: verdana;
+
+	h1 {
+		color: $base-font-color;
+		display: flex;
+	}
+
+}
