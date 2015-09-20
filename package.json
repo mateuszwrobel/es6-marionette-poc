@@ -14,7 +14,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "browserify app/index.js --debug -g uglifyify | exorcist public/js/bundle.js.map > public/js/bundle.js",
 		"dev:build:js": "browserify app/index.js --debug > public/js/bundle.js",
-		"dev:build:css": "parallelshell \"node-sass app/assets/scss/index.scss | node-sass > public/css/styles.css\" \"postcss -c postcss.json\"",
+		"dev:build:css": "node-sass app/assets/scss/index.scss | node-sass > public/css/styles.css | postcss -c postcss.json",
 		"watch:css": "watch \"npm run dev:build:css\" \"app/assets/scss\"",
 		"watch:js": "watchify app/index.js -d -v -o public/js/bundle.js -p errorify",
 		"livereload": "livereload \"public\" -i 500",
@@ -24,7 +24,9 @@
 	"license": "ISC",
 	"dependencies": {
 		"backbone": "^1.2.3",
-		"backbone.marionette": "^2.4.3"
+		"backbone.marionette": "^2.4.3",
+		"lodash": "^3.10.1",
+		"jquery": "^2.1.4"
 	},
 	"devDependencies": {
 		"autoprefixer": "^6.0.3",
@@ -37,9 +39,7 @@
 		"exorcist": "^0.4.0",
 		"express": "^4.13.3",
 		"handlebars": "^4.0.2",
-		"jquery": "^2.1.4",
 		"livereload": "^0.3.7",
-		"lodash": "^3.10.1",
 		"mkdirp": "^0.5.1",
 		"node-sass": "^3.3.3",
 		"parallelshell": "^2.0.0",
