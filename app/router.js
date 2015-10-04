@@ -1,7 +1,5 @@
-var app = require('./index');
-var Backbone = require('backbone');
-var Marionette = require('backbone.marionette');
-var main = require('./components/main/controller');
+import Marionette from 'backbone.marionette';
+import Main from './components/main/controller';
 
 var Router = Marionette.AppRouter.extend({
 	appRoutes: {
@@ -11,10 +9,11 @@ var Router = Marionette.AppRouter.extend({
 
 var controller = {
 	showIndex: function() {
+		let main = new Main();
 		main.init();
 	}
 };
 
-new Router({
+export var router = new Router({
 	controller: controller
 });

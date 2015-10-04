@@ -1,10 +1,14 @@
-var app = require('./../../app');
-var View = require('./view');
+import app from './../../app';
+import CollectionView from './views/collectionView';
+import Marionette from 'backbone.marionette';
 
-var Main = {
-	init: () => {
-		app.mainLayout.show(new View());
+export default class Main extends Marionette.Object {
+	init() {
+		app.request('get:service1')
+			.done(function(collection) {
+				app.modules.vendors.regionManager.get('mainLayout').show(new CollectionView({
+					collection: collection
+				}));
+			});
 	}
-};
-
-module.exports = Main;
+}

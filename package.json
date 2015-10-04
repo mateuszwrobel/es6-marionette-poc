@@ -1,5 +1,5 @@
 {
-	"name": "browserifytest",
+	"name": "es6-marionette-poc",
 	"version": "1.0.0",
 	"description": "",
 	"main": "server.js",
@@ -14,8 +14,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "browserify app/index.js --debug -g uglifyify | exorcist public/js/bundle.js.map > public/js/bundle.js",
 		"dev:build:js": "browserify app/index.js --debug > public/js/bundle.js",
-		"dev:build:css": "node-sass app/assets/scss/index.scss | node-sass > public/css/styles.css | postcss -c postcss.json",
-		"watch:css": "watch \"npm run dev:build:css\" \"app/assets/scss\"",
+		"dev:build:css": "postcss -c postcss.json",
+		"watch:css": "watch \"npm run dev:build:css\" \"app/assets/css\"",
 		"watch:js": "watchify app/index.js -d -v -o public/js/bundle.js -p errorify",
 		"livereload": "livereload \"public\" -i 500",
 		"dev": "parallelshell \"node server.js\" \"npm run watch:js\" \"npm run watch:css\" \"npm run livereload\""
@@ -25,7 +25,6 @@
 	"dependencies": {
 		"backbone": "^1.2.3",
 		"backbone.marionette": "^2.4.3",
-		"lodash": "^3.10.1",
 		"jquery": "^2.1.4"
 	},
 	"devDependencies": {
@@ -41,9 +40,9 @@
 		"handlebars": "^4.0.2",
 		"livereload": "^0.3.7",
 		"mkdirp": "^0.5.1",
-		"node-sass": "^3.3.3",
 		"parallelshell": "^2.0.0",
 		"postcss-cli": "^2.1.0",
+		"precss": "^1.2.3",
 		"uglifyify": "^3.0.1",
 		"watch": "^0.16.0",
 		"watchify": "^3.4.0"

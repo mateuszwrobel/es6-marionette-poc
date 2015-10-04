@@ -16,6 +16,10 @@ app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/public/index.html');
 });
 
+app.get('/service1', function(req, res) {
+	res.sendFile(config.mockDir + 'service1/response\.json');
+});
+
 var server = app.listen(config.port, config.hostname, function() {
 	var _host = server.address().address;
 	var _port = server.address().port;

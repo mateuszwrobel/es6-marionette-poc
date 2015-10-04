@@ -1,6 +1,6 @@
 {
-	"use": ["autoprefixer"],
-	"input": "public/css/styles.css",
+	"use": ["precss", "autoprefixer"],
+	"input": "app/assets/css/index.css",
 	"output": "public/css/styles.css",
 	"autoprefixer": {
 		"browsers": "last 2 versions"
