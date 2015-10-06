@@ -23,20 +23,21 @@ You do not need Bower, Gulp or Grunt, or some other task managers. All things yo
 3. Install all modules `npm i`
 4. Install [LiveReload](http://livereload.com/) plugin to your browser
 5. Use scripts defined in package.json (write in command line, eg.: `npm run dev:mock`):
-	* "build" - builds minimised JavaScript
-	* "dev:build:js" - builds concatenated JavaScript
-	* "dev:build:css" - builds concatenated CSS
-	* "watch:css" - watches for changes in `app/assets/css` folder and build CSS
-	* "watch:js" - watches for changes in `app` folder and build JS
-	* "livereload" - watches for changes in `public` folder and notify browser to reload css and JS files
-	* "dev:mock" - runs node server `http://localhost:8080`, watchers and livereload
-	* "dev" - runs watchers and livereload
+	* `build` - builds minimised JavaScript
+	* `dev:build:js` - builds concatenated JavaScript
+	* `dev:build:css` - builds concatenated CSS
+	* `watch:css` - watches for changes in `app/assets/css` folder and build CSS
+	* `watch:js` - watches for changes in `app` folder and build JS
+	* `livereload` - watches for changes in `public` folder and notify browser to reload css and JS files
+	* `dev:mock` - runs node server `http://localhost:8080`, watchers and livereload
+	* `dev` - runs watchers and livereload
 
 ## Why tabs for indentation?
 
 Because. Tabs are much more flexible for teams. I do not care that in github it looks horrible. I write and read code in editor not in github.
 
 ## TODO
+* TESTS!
 * local modules for large projects
 * module management to avoid ./../../../
 * better mock management
