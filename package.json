@@ -18,7 +18,8 @@
 		"watch:css": "watch \"npm run dev:build:css\" \"app/assets/css\"",
 		"watch:js": "watchify app/index.js -d -v -o public/js/bundle.js -p errorify",
 		"livereload": "livereload \"public\" -i 500",
-		"dev": "parallelshell \"node server.js\" \"npm run watch:js\" \"npm run watch:css\" \"npm run livereload\""
+		"dev:mock": "parallelshell \"node server.js\" \"npm run watch:js\" \"npm run watch:css\" \"npm run livereload\"",
+		"dev": "parallelshell \"npm run watch:js\" \"npm run watch:css\" \"npm run livereload\""
 	},
 	"author": "",
 	"license": "ISC",
