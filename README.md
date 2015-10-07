@@ -11,6 +11,7 @@ All of this does not matter when I was considering switching to ES6, but just to
 * [Babel](https://babeljs.io/) - to compile ES6 code to ES5
 * [PostCSS](https://github.com/postcss/postcss) - because SASS and LASS compilers have lot of problems with latest NPM (I do not know why and I don't care, tools must just work)
 * [express.js](http://expressjs.com/) - I use it to create server to serve mocks
+* [JSON Generator](http://www.json-generator.com/) - to create mocks for PoC
 
 ## Why not other tools?
 
