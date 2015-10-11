@@ -12,5 +12,3 @@ export default class Main extends Marionette.Object {
 			});
 	}
 }
-
-test

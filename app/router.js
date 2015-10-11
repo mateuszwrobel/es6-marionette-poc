@@ -14,6 +14,6 @@ var controller = {
 	}
 };
 
-export var router = new Router({
+export default new Router({
 	controller: controller
 });
