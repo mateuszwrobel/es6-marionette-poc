@@ -44,5 +44,9 @@ Because. Tabs are much more flexible for teams. I do not care that in github it 
 * better mock management
 * building bundles for modules/components/ect.
 
+## To read
+* http://benmccormick.org/2015/07/06/backbone-and-es6-classes-revisited/
+
+
 ## Thanks
 Thanks to [rofrol](https://github.com/rofrol) for publishing [react-starter-kit](https://github.com/rofrol/react-starter-kit) that inspired me to create this PoC.
