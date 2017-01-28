@@ -1,3 +1,8 @@
+# Project replaced with backbone boilerplate:
+https://github.com/mateuszwrobel/backbone-boilerplate
+
+
+
 # ES6 Marionette Proof of Concept
 
 Currently most of projects I am working on are based on Backbone and Marionette. None of them is a simple read/write to/from model/collection, so REST services are responding with lot of data which need to be somehow parsed.
